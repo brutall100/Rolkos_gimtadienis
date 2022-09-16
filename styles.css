@@ -5,9 +5,7 @@ body {
     background:
 	radial-gradient(
 			at bottom right,
-			dodgerblue 0,
-			dodgerblue 1em,
-			lightskyblue 1em,
+
 			lightskyblue 2em,
 			deepskyblue 2em,
 			deepskyblue 3em,
@@ -34,9 +32,6 @@ body {
 			lightsteelblue 4em,
 			gainsboro 4em,
 			gainsboro 5em,
-			deepskyblue 5em,
-			deepskyblue 6em,
-			skyblue 6em,
 			skyblue 7em,
 			dodgerblue 7em,
 			dodgerblue 8em,
