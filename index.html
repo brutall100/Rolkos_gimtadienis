@@ -1,45 +1,91 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Happy+Monkey&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <div id="header">
-            <h1>Rolando Taparausko Gimtadienis 🎉</h1>
-            <img id="bff-img" src="images/Rolka_Pus.jpg">
-            <h2 id="bday-age">35 metai</h2>
-            <h4 id="bday-date">2022.08.14</h4>
-        </div>
-        
-        <div class="gift-section">
-            <h2 class="gift-title">Didžiausi sveikinimai Gimtadienio proga 🥳</h2>
-            <h3 class="gift-hint">(Užvesk peliuką ant dovanos)</h3>
-            <div class="gift-img" id="gift-img-happy"></div>
-        </div>
-        
-        <div class="gift-section">
-            <h2 class="gift-title">Kai tave pamato draugai ir pažystami 😍</h2>
-            <div class="gift-img" id="gift-img-fura"></div>
-        </div>
-        
-        <div class="gift-section">
-            <h2 class="gift-title">Kaip tave mato draugai ir pažystami 👇</h2>
-            <div class="gift-img" id="gift-img-genius"></div>
-        </div>
-        
-        <div class="gift-section">
-            <h2 class="gift-title">Su kokiu žmogumi tave sulyginčiau 💪</h2>
-            <div class="gift-img" id="gift-img-badass"></div>
-        </div>
-        
-         <div class="gift-section">
-            <h2 class="gift-title">Keliam taure už tave 🥂</h2>
-            <div class="gift-img" id="gift-img-cheers"></div>
-        </div>
-        
-        <p id="footer">© Sukurė Aldas</p>
-        
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Birthday Gift Card</title>
+  <meta name="description" content="An interactive birthday card: open five wrapped gifts to reveal animated surprises.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎁</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:wght@400;600;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg" aria-hidden="true"><span class="glow glow-a"></span><span class="glow glow-b"></span></div>
+
+  <header class="topbar">
+    <span class="tag">// birthday.card</span>
+    <button class="theme-toggle" type="button" aria-label="Toggle light and dark theme">
+      <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="avatar" aria-hidden="true"><span>AD</span></div>
+      <p class="tag">It's party time</p>
+      <h1>Happy Birthday,<br><span class="accent-text">Alex Doe</span> 🎉</h1>
+      <div class="chips">
+        <span class="chip">35 years</span>
+        <span class="chip">2022-08-14</span>
+      </div>
+      <p class="lead">Five gifts are waiting. Hover, tap or press <kbd>Enter</kbd> on a box to unwrap it.</p>
+      <div class="actions">
+        <button class="btn btn-primary" type="button" id="open-all">Open all gifts <span aria-hidden="true">↗</span></button>
+        <a class="btn btn-ghost" href="https://github.com/brutall100/scrimba-birthday-gift">Source code <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="counter"><span id="opened">0</span> / 5 opened</p>
+    </section>
+
+    <section class="gifts" aria-label="Gifts">
+      <article class="gift" style="--tone: var(--c1)">
+        <h2>Biggest birthday wishes</h2>
+        <button class="box" type="button" aria-expanded="false" aria-label="Unwrap gift 1">
+          <span class="wrap" aria-hidden="true"><span class="lid"></span><span class="ribbon"></span></span>
+          <span class="surprise" aria-hidden="true"><span class="emoji bounce">🥳</span><span class="caption">Make a wish!</span></span>
+        </button>
+      </article>
+
+      <article class="gift" style="--tone: var(--c2)">
+        <h2>When your friends spot you</h2>
+        <button class="box" type="button" aria-expanded="false" aria-label="Unwrap gift 2">
+          <span class="wrap" aria-hidden="true"><span class="lid"></span><span class="ribbon"></span></span>
+          <span class="surprise" aria-hidden="true"><span class="emoji pulse">😍</span><span class="caption">Instant fan club</span></span>
+        </button>
+      </article>
+
+      <article class="gift" style="--tone: var(--c3)">
+        <h2>How your friends see you</h2>
+        <button class="box" type="button" aria-expanded="false" aria-label="Unwrap gift 3">
+          <span class="wrap" aria-hidden="true"><span class="lid"></span><span class="ribbon"></span></span>
+          <span class="surprise" aria-hidden="true"><span class="emoji spin">🧠</span><span class="caption">Certified genius</span></span>
+        </button>
+      </article>
+
+      <article class="gift" style="--tone: var(--c4)">
+        <h2>Who I'd compare you to</h2>
+        <button class="box" type="button" aria-expanded="false" aria-label="Unwrap gift 4">
+          <span class="wrap" aria-hidden="true"><span class="lid"></span><span class="ribbon"></span></span>
+          <span class="surprise" aria-hidden="true"><span class="emoji flex">💪</span><span class="caption">An action hero</span></span>
+        </button>
+      </article>
+
+      <article class="gift" style="--tone: var(--c5)">
+        <h2>Raising a glass to you</h2>
+        <button class="box" type="button" aria-expanded="false" aria-label="Unwrap gift 5">
+          <span class="wrap" aria-hidden="true"><span class="lid"></span><span class="ribbon"></span></span>
+          <span class="surprise" aria-hidden="true"><span class="emoji clink">🥂</span><span class="caption">Cheers!</span></span>
+        </button>
+      </article>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Made with 💜 as a <a href="https://scrimba.com">Scrimba</a> practice project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
